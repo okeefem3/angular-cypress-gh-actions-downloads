@@ -1,6 +1,8 @@
+
+import { Then } from 'cypress-cucumber-preprocessor/steps';
 import * as path from 'path';
 
-it('loads examples', () => {
+Then('User downloads and verifies file', () => {
   cy.visit('https://angular-cypress-gh-actions.web.app/');
   cy.get('#downloadButton').click();
   validateCSVFileExists('My Data.csv');
