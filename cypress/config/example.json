@@ -1,0 +1,14 @@
+{
+  "video": false,
+  "videoUploadOnPasses": false,
+  "screenshotOnRunFailure": true,
+  "screenshotsFolder": "cypress/sf-ui/cypress/screenshots",
+  "videosFolder": "cypress/sf-ui/cypress/videos",
+  "downloadsFolder": "cypress/testing-downloads",
+  "chromeWebSecurity": false,
+  "numTestsKeptInMemory": 5,
+  "defaultCommandTimeout": 10000,
+  "requestTimeout": 10000,
+  "viewportWidth": 1400,
+  "viewportHeight": 1500
+}

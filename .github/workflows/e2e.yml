@@ -1,0 +1,31 @@
+name: End-To-End Testing
+
+on:
+  workflow_dispatch
+
+jobs:
+    cypress:
+      runs-on: ubuntu-latest
+      strategy:
+        fail-fast: false
+
+      steps:
+        - name: Checkout Codebase
+          uses: actions/checkout@v2
+
+        - name: Configure Node version and registry
+          uses: actions/setup-node@v1
+          with:
+            node-version: 12
+
+        - name: Update npm
+          run: npm install -g npm@7
+
+        - name: Run Cypress For Dashboard
+          id: cypress-dashboard
+          uses: cypress-io/github-action@v2
+          timeout-minutes: 60
+          with:
+            command: npm run ci:e2e
+
+
